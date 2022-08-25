@@ -11,5 +11,6 @@ namespace srdl_repo.Models
 
         //Relationships
         public Division Division { get; set; }
+        public ICollection<Upazila> Upazilas { get; set; }
     }
 }

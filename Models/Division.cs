@@ -12,5 +12,6 @@ namespace srdl_repo.Models
 
         //Relationships
         public ICollection<District> Districts { get; set; }
+        public ICollection<Upazila> Upazilas { get; set; }
     }
 }
