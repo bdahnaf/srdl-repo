@@ -12,5 +12,8 @@ namespace srdl_repo.Models
         public string Address { get; set; }
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
+
+        //Relationships
+        public ICollection<Image> Images { get; set; }
     }
 }

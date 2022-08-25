@@ -13,5 +13,8 @@ namespace srdl_repo.Models
         [Required]
         public string Extension { get; set; }
         public DateTime PostedDate { get; set; }
+
+        //Relationships
+        public School School { get; set; }
     }
 }
