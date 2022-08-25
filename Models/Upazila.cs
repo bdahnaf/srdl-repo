@@ -11,6 +11,5 @@ namespace srdl_repo.Models
 
         //Relationships
         public District District { get; set; }
-        public Division Division { get; set; }
     }
 }
