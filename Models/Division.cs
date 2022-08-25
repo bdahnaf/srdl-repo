@@ -6,6 +6,8 @@ namespace srdl_repo.Models
     {
         [Key]
         public int DivisionId { get; set; }
+        [Required]
+        public string Name { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.Now;
 
         //Relationships
