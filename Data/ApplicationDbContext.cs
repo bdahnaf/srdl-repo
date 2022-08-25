@@ -13,5 +13,7 @@ namespace srdl_repo.Data
         public DbSet<Division> Divisions { get; set; }
         public DbSet<District> Districts { get; set; }
         public DbSet<Upazila> Upazilas { get; set; }
+        public DbSet<School> Schools { get; set; }
+        public DbSet<Image> Images { get; set; }
     }
 }
