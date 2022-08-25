@@ -11,6 +11,6 @@ namespace srdl_repo.Models
         public DateTime CreatedAt { get; set; } = DateTime.Now;
 
         //Relationships
-        public TYPE Type { get; set; }
+        public ICollection<District> Districts { get; set; }
     }
 }

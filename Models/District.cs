@@ -8,5 +8,8 @@ namespace srdl_repo.Models
         public int DistrictId { get; set; }
         [Required]
         public string Name { get; set; }
+
+        //Relationships
+        public Division Division { get; set; }
     }
 }
