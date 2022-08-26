@@ -12,8 +12,8 @@ using srdl_repo.Data;
 namespace srdl_repo.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220825185450_AddedSchoolsAndImagesTablesToDb")]
-    partial class AddedSchoolsAndImagesTablesToDb
+    [Migration("20220826052433_InitialMigration")]
+    partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -134,8 +134,11 @@ namespace srdl_repo.Migrations
 
             modelBuilder.Entity("srdl_repo.Models.Upazila", b =>
                 {
-                    b.Property<string>("UpzailaId")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("UpzailaId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UpzailaId"), 1L, 1);
 
                     b.Property<int>("DistrictId")
                         .HasColumnType("int");

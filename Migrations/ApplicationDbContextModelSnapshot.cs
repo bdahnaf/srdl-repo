@@ -132,8 +132,11 @@ namespace srdl_repo.Migrations
 
             modelBuilder.Entity("srdl_repo.Models.Upazila", b =>
                 {
-                    b.Property<string>("UpzailaId")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("UpzailaId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UpzailaId"), 1L, 1);
 
                     b.Property<int>("DistrictId")
                         .HasColumnType("int");
